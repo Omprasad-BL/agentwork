@@ -1,59 +1,51 @@
-
-Agent Management Portal: Installation Guide
+Installation Guide
 Set up the Agent Management Portal by following these step-by-step instructions.
 
-Prerequisites
-Before you begin, ensure you have the following installed on your system:
+1. Clone the repository
+bash
 
-Git
-
-Node.js (which includes npm)
-
-Step 1: Clone the Repository
-First, clone the project repository from GitHub to your local machine.
-
-git clone https://github.com/Omprasad-BL/agentwork
-
-Once cloned, navigate into the main project folder:  
+git clone <https://github.com/Omprasad-BL/agentwork
 cd agentwork
+Replace <your-repo-url> with the actual Github clone link.
 
-Step 2: Set Up the Backend
-You'll need to install dependencies and configure the environment variables for the server.
+2. Install Frontend dependencies
+Navigate to the frontend project folder named "frontend".
 
-Navigate to the backend folder:  
-cd backend
-
-Install backend dependencies: This command installs all required packages listed in package.json.  
-npm install
-
-Set environment variables: The backend requires a .env file for secret keys and configuration. A template is provided as .txt. You must rename or copy this file to .env.
-
-Bash
-# Use mv to rename the file
-mv .env.txt .env
-
-Step 3: Set Up the Frontend
-Open a new terminal window or tab. You will need two terminals running at the same time: one for the backend and one for the frontend.
-
-Navigate to the frontend folder: From the root agentwork directory:  
+bash  
 cd frontend
-
-Install frontend dependencies:  
 npm install
+This will install all required packages listed in package.json.
 
-Step 4: Run the Application
-You must run both the backend and frontend servers simultaneously.
+3. Install Backend dependencies
+Open a new terminal, then navigate to the backend folder named "backend":
 
-Start the backend server:
+bash  
+cd ../backend
+npm install
+This will install backend packages listed in its package.json.
 
-In your backend terminal (the one in the backend folder):  
+4. Set environment variables
+The backend expects its secret keys and configuration in a .env file. If a file named  .txt is present, rename or copy it as .env:
+
+bash  
+mv .env.txt .env
+Now you can edit .env to enter your environment variables as needed.
+
+5. Start the backend server
+
+bash  
+npm run dev
+This launches the server from the backend folder.
+
+6. Start the frontend development server
+
+Return to the frontend folder and run:  
+bash
 npm run dev
 
-step 5: Access the App
-Once both servers are running, you can access the application in your browser:
 
-Frontend App: http://localhost:5173
+7. Access the app  
 
-Backend API: http://localhost:3000 (or the port set in your .env file)
+Frontend: Visit http://localhost:5173 or your frontend server port.  
 
-"USE admin@gmail.com as admin email to signup and login"
+Backend API: Usually runs on http://localhost:3000 or the port set in your .env.
