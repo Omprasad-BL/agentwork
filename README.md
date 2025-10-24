@@ -49,3 +49,5 @@ npm run dev
 Frontend: Visit http://localhost:5173 or your frontend server port.  
 
 Backend API: Usually runs on http://localhost:3000 or the port set in your .env.
+
+"use admin@gmail.com to signin and login because his role is setup else normal user"
